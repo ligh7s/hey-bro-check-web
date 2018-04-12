@@ -1,0 +1,4 @@
+__pycache__
+config.py
+logs.db
+uploaded_logs/

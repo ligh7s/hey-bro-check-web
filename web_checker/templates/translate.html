@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Log Translator Results</title>
+    <link href="../static/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            Log Translator Results (hey-bro-check-log)
+        </div>
+
+        <div class="body">
+            <ul class="info">
+                {% if contents.unrecognized %}
+                    <li>Log is unrecognized. {{ contents.unrecognized }}.</li>
+                {% else %}
+                    {% if contents.language == 'english' %}
+                        <li>Original language is English, no translation necessary.</li>
+                    {% else %}
+                        <li>Original Language: {{ contents.language }}</li>
+                    {% endif %}
+                {% endif %}
+            </ul>
+
+	    {% if contents.log %}
+	    	<div class="log-text">
+                <pre>{{ contents.log }}</pre>
+	        </div>
+	    {% endif %}
+        </div>
+    </div>
+</body>

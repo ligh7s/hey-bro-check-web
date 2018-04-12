@@ -1,0 +1,2 @@
+MAX_CONTENT_LENGTH = 50 * 1024  # 50 KB
+UPLOAD_FOLDER = '/path/to/logs/directory'

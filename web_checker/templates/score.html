@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Log Analysis Results</title>
+    <link href="../static/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            Log Analyzer Results (hey-bro-check-log)
+        </div>
+
+        <div class="body">
+            <ul class="info">
+                {% if contents.unrecognized %}
+                    <li>Log is unrecognized. {{ contents.unrecognized }}.</li>
+                {% else %}
+                    <li>Name: {{ contents.name }}</li>
+                    <li>Ripper: {{ contents.ripper }}</li>
+                    <li>Version: {{ contents.version }}</li>
+                    <li>Score: {{ contents.score }}</li>
+                    {% if contents.deductions %}
+                        <li>Score Breakdown:</li>
+                        <ol class="deductions">
+                            {% for deduction in contents.deductions %}
+                                <li>{{ deduction[0] }}</li>
+                            {% endfor %}
+                        </ol>
+                    {% endif %}
+                {% endif %}
+            </ul>
+
+            {% if contents.contents %}
+                <div class="log-text">
+                    <pre>{{ contents.contents }}</pre>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

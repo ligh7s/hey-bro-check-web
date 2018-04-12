@@ -1,0 +1,141 @@
+body {
+    background-image: url('/static/texture.png');
+}
+
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    background: rgba(41, 41, 41, 0.5);
+    border-color: #333;
+    border-radius: 3px;
+    padding: 10px;
+    color: #ddd;
+}
+
+button {
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+ol, ul {
+    margin-bottom: 0 !important;
+    list-style: none;
+}
+
+ul > li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+ol > li {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    margin: 30px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #f1f1f1;
+    text-transform: uppercase;
+}
+
+.buttons-bar {
+    margin: 15px 0 0 auto;
+    text-align: right;
+}
+
+.translate-button {
+    background-color: #4ca64c;
+}
+
+.score-button {
+    margin-left: 10px;
+    background-color: #6666b2;
+}
+
+.info {
+    background-color: rgba(46, 46, 46, 0.5);
+    padding: 25px;
+    color: #cfcfcf;
+}
+
+.log-text > pre {
+    padding: 25px;
+    background-color: rgba(41, 41, 41, 0.5);
+    overflow: auto;
+    color: #aaa;
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+  margin: 20px 0 5px 0;
+}
+
+.upload-btn {
+  border: 2px solid #888;
+  color: #ccc;
+  background-color: rgba(24, 24, 24, 0.7);
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.log2 {
+	color: yellow;
+}
+
+.log3 {
+	color: #0E88C6;
+}
+
+.log4 {
+ 	font-weight: bold;
+}
+
+.log5 {
+ 	text-decoration: underline;
+}
+.good {
+	font-weight: bold;
+	color: green;
+}
+
+.bad {
+	font-weight: bold;
+	color: red;
+}
+
+.goodish {
+	font-weight: bold;
+	color: #35BF00;
+}
+
+.badish {
+	font-weight: bold;
+	color: #E5B244;
+}

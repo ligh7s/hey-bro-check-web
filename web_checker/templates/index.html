@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Log Analyzer</title>
+    <link href="../static/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            Log Analyzer (hey-bro-check-log)
+        </div>
+
+        <div class="body">
+            <form action="handle" id="log-input" method="post" enctype="multipart/form-data">
+                <textarea rows="30" name="log-content" placeholder="Paste log file here"></textarea>
+                <div class="upload-btn-wrapper">
+                    <button id="upload-btn" class="upload-btn">or upload a log file instead</button>
+                    <input type="file" id="upload-file" name="logfile" accept=".log" />
+                </div>
+                <div class="buttons-bar" role="toolbar">
+                    <button type="submit" name="action" class="translate-button" value="Translate">Translate</button>
+                    <button type="submit" name="action" class="score-button" value="Score">Score</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<script>
+    document.getElementById("upload-file").onchange = function () {
+        document.getElementById("upload-btn").childNodes[0].nodeValue = this.value.replace(/^.*[\\\/]/, '');
+    };
+</script>
